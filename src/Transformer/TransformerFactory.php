@@ -190,7 +190,7 @@ class TransformerFactory
      */
     protected function isCollection($instance)
     {
-        return $instance instanceof Collection || $instance instanceof Paginator;
+        return $instance instanceof Collection || $instance instanceof Paginator || is_a($instance, 'Doctrine\Common\Collections\ArrayCollection');
     }
 
     /**
